@@ -90,6 +90,10 @@ export default {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        "move-up": {
+          "0%": { transform: "translateY(100vh)" },
+          "100%": { transform: "translateY(-100vh)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -97,6 +101,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         twinkle: "twinkle 3s ease-in-out infinite",
         "gradient-shift": "gradient-shift 3s ease infinite",
+        "move-up": "move-up 20s linear infinite",
       },
     },
   },
