@@ -21,8 +21,8 @@ const StarryBackground = () => {
           x: Math.random() * 100,
           y: Math.random() * 100,
           size: Math.random() * 2 + 1,
-          delay: Math.random() * 20,
-          duration: Math.random() * 20 + 20,
+          delay: Math.random() * 10,
+          duration: Math.random() * 10 + 10,
         });
       }
       setStars(newStars);
