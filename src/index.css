@@ -47,7 +47,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 60% 55%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
-    --gradient-hero: linear-gradient(to right, hsl(38 92% 50%) 0%, hsl(28 80% 50%) 100%); /* Orange gradient */
+    --gradient-hero: linear-gradient(to right, hsl(38 92% 50%), hsl(28 80% 50%), hsl(38 92% 50%)); /* Orange gradient */
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
@@ -83,10 +83,10 @@ All colors MUST be HSL.
 
   @keyframes gradient-shift {
     0% {
-      background-position: 0% 50%;
+      background-position: 200% 50%;
     }
     100% {
-      background-position: 200% 50%;
+      background-position: 0% 50%;
     }
   }
 
@@ -112,7 +112,7 @@ All colors MUST be HSL.
 
   @keyframes move-up {
     0% {
-      transform: translateY(0);
+      transform: translateY(100vh);
     }
     100% {
       transform: translateY(-100vh);
