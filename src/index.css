@@ -47,7 +47,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 60% 55%) 100%);
     --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(28 80% 50%) 100%); /* Orange gradient */
+    --gradient-hero: linear-gradient(to right, hsl(38 92% 50%) 0%, hsl(28 80% 50%) 100%); /* Orange gradient */
     
     /* Shadows */
     --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
@@ -69,7 +69,8 @@ All colors MUST be HSL.
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-hero);
-    animation: gradient-shift 3s ease infinite;
+    background-size: 200% auto;
+    animation: gradient-shift 3s linear infinite;
   }
 
   .card-glass {
@@ -81,11 +82,11 @@ All colors MUST be HSL.
   }
 
   @keyframes gradient-shift {
-    0%, 100% {
+    0% {
       background-position: 0% 50%;
     }
-    50% {
-      background-position: 100% 50%;
+    100% {
+      background-position: 200% 50%;
     }
   }
 
@@ -127,6 +128,6 @@ All colors MUST be HSL.
   }
 
   .animate-move-up {
-    animation: move-up 20s linear infinite;
+    animation: move-up 10s linear infinite;
   }
 }
