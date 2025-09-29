@@ -8,45 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 222 47% 8%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 12%;
+    --card: 222 47% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 12%;
+    --popover: 222 47% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 265 85% 65%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 265 60% 50%;
+    --secondary: 270 60% 55%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 32% 20%;
+    --muted: 217 32% 25%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 265 85% 65%;
+    --accent: 142 76% 36%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
     --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 222 47% 11%;
 
     --warning: 38 92% 50%;
     --warning-foreground: 222 47% 11%;
 
-    --border: 217 32% 20%;
-    --input: 217 32% 20%;
-    --ring: 265 85% 65%;
+    --border: 217 32% 25%;
+    --input: 217 32% 25%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(265 85% 65%) 0%, hsl(280 70% 55%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(265 85% 65%) 0%, hsl(280 70% 55%) 50%, hsl(265 85% 75%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 60% 55%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 60% 55%) 50%, hsl(142 76% 36%) 100%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(222 47% 5% / 0.5);
   }
 }
 
@@ -68,11 +73,11 @@ All colors MUST be HSL.
   }
 
   .card-glass {
-    @apply bg-card/80 backdrop-blur-sm border border-primary/30;
+    @apply bg-card/50 backdrop-blur-xl border border-border/50;
   }
 
-  .card-bordered {
-    @apply bg-card border-2 border-primary/30 hover:border-primary/50 transition-all duration-300;
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
   }
 
   @keyframes gradient-shift {
