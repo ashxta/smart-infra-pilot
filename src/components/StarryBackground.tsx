@@ -5,7 +5,6 @@ interface Star {
   x: number;
   y: number;
   size: number;
-  delay: number;
   duration: number;
 }
 
@@ -21,7 +20,6 @@ const StarryBackground = () => {
           x: Math.random() * 100,
           y: Math.random() * 100,
           size: Math.random() * 2 + 1,
-          delay: Math.random() * 10,
           duration: Math.random() * 10 + 10,
         });
       }
@@ -42,7 +40,6 @@ const StarryBackground = () => {
             top: `${star.y}%`,
             width: `${star.size}px`,
             height: `${star.size}px`,
-            animationDelay: `${star.delay}s`,
             animationDuration: `${star.duration}s`,
           }}
         />
